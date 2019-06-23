@@ -1,39 +1,52 @@
 
 // Creating the search box/form
 
-function build(e, animate) 
+function build(e, animate)
 {
 	var methodFade = (animate) ? fadeDur : 0;
-	
+
 	current.engine = e;		// Just the engine's ID for reference
 	e = eng[e];				// Engine object
-	
+
 	$("#title").html(titlePrefix+e.pageTitle);
-	
+
 	$("#method").stop().queue("fx",[]).animate({"opacity": 0}, methodFade);
-	
+
 	op = (idxState) ? idxFadedOpacity : 0;
 	$("#engines a").stop().queue("fx",[]).removeClass("active");
 	$("#"+current.engine+"_logo").addClass("active").animate({"opacity": 1}, fadeDur);
 	$("#engines a:not(.active)").animate({"opacity": op}, fadeDur);
-	
+
 	if (typeof e.languages == "object") setLang(firstProp(e.languages));
 	else $("#lang").fadeOut(fadeDur);
-	
+
 	closeSugBox(false);
-	
+
 	$("#i").attr("autosave", "com.infinise.go."+current.engine);
 	$("#input input").focus();
-	
+
 	setTimeout(function()
 	{
 		$("#method").html("");
-		for (place in e.places) $("#method").append("<a onclick='setPlace(this)'>"+place+"</a>");
-		
+		for (place in e.places) $("#method").append("<a>"+place+"</a>");
+
 		setPlace("#method a:first");
-		
+
 		$("#method").animate({"opacity": 1}, fadeDur);
 	}, methodFade);
+
+	// Loading navigator language.
+	if(eng[current.engine].languages)
+	{
+		if(eng[current.engine].languages[window.navigator.language.substring(0,2).toUpperCase()])
+		{
+			if(window.navigator.language.substring(0,2).toUpperCase() == eng[current.engine].languages[window.navigator.language.substring(0,2).toUpperCase()].toUpperCase())
+			{
+			setLang(window.navigator.language.substring(0,2).toUpperCase());
+			}
+		}
+	}
+
 }
 
 

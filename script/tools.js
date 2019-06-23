@@ -1,3 +1,7 @@
+function safeName(s) 
+{
+	return s.toLowerCase().replace(/[^a-z0-9_]/gi, '');
+}
 
 // Returns the first property of an object
 	

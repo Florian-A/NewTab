@@ -21,7 +21,7 @@ function indexCreate()
 			offset = offset * (idxLogoSmall[0]+idxMargin) / 2;
 		}
 		
-		$("#engines").prepend("<a id='"+e+"_logo' ref='"+e+"'><img src='engines/"+eng[e].logo+"'></a>");
+		$("#engines").prepend("<a id='"+e+"_logo' ref='"+e+"'><img src='style/"+eng[e].logo+"'></a>");
 		
 		if (i == cols) { i=0; row++; };
 		eng[e].idxPos = [

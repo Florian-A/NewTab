@@ -1,44 +1,55 @@
 
 // Configuration
 
-var	fadeDur = 200,
+var eng = {},
+	current = {},
+	fadeDur = 200,
 	titlePrefix = "Search ",
-	
+
 	idxWidth = 700,
 	idxLogoFull  = [225,80],
 	idxLogoSmall = [157,56],
 	idxMargin = 24,
-	idxFadedOpacity = 0.3;
+	idxFadedOpacity = 0.3,
 
-
-// Empty placeholer variables
-	
-var eng_count = 0,
-	init_status = 0,
-	eng = {},
-	current = {},
 	idxHeight = 0;
+
+	$( "#form" ).submit(function( event ) {
+	  alert( "Handler for .submit() called." );
+	  event.preventDefault();
+	});
 
 
 // Initial Setup Function
 
-function init()
+$(function()
 {
+	// Create Engine Index
+
 	indexCreate();
-	
+
 	// Behavior
 
 	$("#i").keyup(function(ev) 		{ fetchSuggestions(ev.which); });
 	$(document).click(function(ev) 	{ closeSugBox(ev.srcElement) });
 
-	$("#toggleInfo").click(function(){
-		$("#infoBox").toggle(400);
-	});
-
-	// Show first search engine
+	// Set up first engine
 
 	build(firstProp(eng), false);
-}
+
+	$( "#form" ).submit(function(){
+		return doSearch();
+	});
+
+	$( "#lang" ).click(function(){
+		return nextLanguage();
+	});
+
+	$(document).on('click', "p#method a", function(){
+		return setPlace(this);
+	})
+
+});
 
 
 // Keyboard stuff
