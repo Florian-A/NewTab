@@ -4,7 +4,6 @@ function safeName(s)
 }
 
 // Returns the first property of an object
-	
 function firstProp(obj) 
 {
 	var first = true;
@@ -14,9 +13,7 @@ function firstProp(obj)
 	}
 }
 
-
 // Returns the property following a specified property of an object
-
 function findNext(where, now) 
 {
 	var isNext = false;
@@ -32,9 +29,7 @@ function findNext(where, now)
 	return next;
 }
 
-
 // Returns the number of properties in an object
-
 function numKeys(obj)
 {
     var count = 0;
@@ -45,9 +40,7 @@ function numKeys(obj)
     return count;
 }
 
-
 // Checks if an array contains a certain value
-
 function inArray(needle, haystack) 
 {
 	return ((','+haystack.toString()+',').indexOf(','+needle+',')!==-1)

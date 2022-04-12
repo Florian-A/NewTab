@@ -1,6 +1,4 @@
-
 // Configuration
-
 var eng = {},
 	current = {},
 	fadeDur = 200,
@@ -21,20 +19,16 @@ var eng = {},
 
 
 // Initial Setup Function
-
 $(function()
 {
 	// Create Engine Index
-
 	indexCreate();
 
 	// Behavior
-
 	$("#i").keyup(function(ev) 		{ fetchSuggestions(ev.which); });
 	$(document).click(function(ev) 	{ closeSugBox(ev.srcElement) });
 
 	// Set up first engine
-
 	build(firstProp(eng), false);
 
 	$( "#form" ).submit(function(){
@@ -51,9 +45,7 @@ $(function()
 
 });
 
-
 // Keyboard stuff
-
 var isCtrl = false;
 var isCmd = false;
 

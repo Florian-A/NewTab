@@ -1,6 +1,4 @@
-
 // Creating the search engine index
-	
 function indexCreate()
 {
 	var row = 0,
@@ -34,7 +32,6 @@ function indexCreate()
 	idxHeight = Math.max(idxHeight, idxLogoFull[1]);
 	
 	$("#engines a").click(function(){ build($(this).attr("ref"), true); })
-	
 	$("#engines a").css({
 		"left": "50%",
 		"bottom": "0",

@@ -1,6 +1,5 @@
 
 // Creating the search box/form
-
 function build(e, animate)
 {
 	var methodFade = (animate) ? fadeDur : 0;
@@ -49,9 +48,7 @@ function build(e, animate)
 
 }
 
-
 // Navigating between the search box options
-
 function nextPlace() 
 {
 	var nextPlace = findNext(eng[current.engine].places, current.place);
@@ -94,9 +91,7 @@ function setLang(language)
 	$("#input input").focus();
 }
 
-
 // Submitting the form
-
 function doSearch()
 {
 	var url = eng[current.engine].places[current.place][0];

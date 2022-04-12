@@ -1,7 +1,5 @@
 
-/*	GOOGLE
-	----------------------------------------------------- */
-
+/*	GOOGLE */
 eng.google = {
 	pageTitle: "Google",
 	logo: "google.png",
@@ -20,9 +18,7 @@ eng.google = {
 };
 
 
-/*	QWANT
-	----------------------------------------------------- */
-
+/*	QWANT */
 eng.qwant = {
 	pageTitle: "Qwant",
 	logo: "qwant.png",
@@ -40,9 +36,7 @@ eng.qwant = {
 };
 
 
-/*	DUCKDUCKGO
-	----------------------------------------------------- */
-
+/*	DUCKDUCKGO */
 eng.duckduckgo = {
 	pageTitle: "DuckDuckGo",
 	logo: "duckduckgo.png",
@@ -55,9 +49,7 @@ eng.duckduckgo = {
 };
 
 
-/*	TWITTER
-	----------------------------------------------------- */
-
+/*	TWITTER */
 	eng.yandex = {
 		pageTitle: "Yandex",
 		logo: "yandex.png",
