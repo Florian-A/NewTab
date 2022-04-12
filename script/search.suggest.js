@@ -1,4 +1,3 @@
-
 function fetchSuggestions(key) 
 {
 	if (key == undefined || (!inArray(key, new Array(13,16,20,27,37,38,39,40)) && !isCtrl && !isCmd)) 
