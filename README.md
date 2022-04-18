@@ -1,5 +1,7 @@
-NewTab
-==========
+<h1 align="center">NewTab</h1>
+<p align="center"><a href="https://chrome.google.com/webstore/detail/new-tab/eehbbidplkcljjnfhbiekcbbmbmhplmo">Télécharcher sur Chrome Web Store</a></p>
+
+---
 
 NewTab est une extension qui remplace la page d'accueil et nouvel onglet des navigateurs web compatibles.
 
